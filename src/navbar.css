@@ -1,0 +1,83 @@
+/* navbar.css */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  position: absolute;
+  width: 1111px;
+  height: 100px;
+  left: 164px;
+  top: 29px;
+}
+
+.navbar-group1 {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  position: absolute;
+  width: 583px;
+  height: 26px;
+  left: 164px;
+  top: 41px;
+}
+
+.navbar-group2 {
+  display: flex;
+  align-items: center;
+  left: 100px;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  margin-bottom: 2px;
+  width: 138px;
+}
+
+.navbar-links {
+  display: flex;
+  height: 26px;
+  left: 0%;
+  right: 80.6%;
+  top: calc(50% - 26px / 2);
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  /* identical to box height, or 173% */
+  color: #69707d;
+}
+
+.navbar-link {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ff6600;
+}
+
+.navbar-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #272121;
+  font-size: 16px;
+  font-weight: bold;
+  width: 48px;
+  height: 35px;
+  margin-left: 955px;
+}
+
+.navbar-avatar {
+  position: absolute;
+  width: 50px;
+  left: 1036px;
+  top: 24px;
+  border-radius: 0px;
+}
