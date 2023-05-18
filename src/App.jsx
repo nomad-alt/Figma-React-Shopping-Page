@@ -5,6 +5,7 @@ import ProductPage from "./ProductPage";
 import productData from './product.json';
 import CartModal from './CartModal';
 
+
 function App() {
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
