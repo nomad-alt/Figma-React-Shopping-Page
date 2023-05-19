@@ -23,7 +23,7 @@ const Navbar = ({ toggleCart, cartLength }) => (
       <FontAwesomeIcon icon={faShoppingCart} />
       <span className="cart-length">{cartLength}</span>
     </button>
-    <img src="/assets/Oval.jpg" alt="User avatar" className="navbar-avatar" />
+    <img src="/assets/Oval.png" alt="User avatar" className="navbar-avatar" />
     </div>
   </nav>
 );
