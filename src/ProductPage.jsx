@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './productPage.css';
+import { sendEvent } from './analytics';
 
 const ProductPage = ({ product, addToCart }) => {
   const [activeImage, setActiveImage] = useState(product.image[0]);
@@ -15,8 +16,20 @@ const ProductPage = ({ product, addToCart }) => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
-  };
+  };  // Added a closing brace here
 
+  const addToCartClick = () => {
+    addToCart(product, quantity);
+    sendEvent('add_to_cart', { 
+      items: [{
+        item_id: product.id,
+        item_name: product.name,
+        price: product.price.toFixed(2),
+        quantity
+      }]
+    });
+  }; 
+  
   return (
     <div className="product-page">
       <div className="product-image">
@@ -52,7 +65,7 @@ const ProductPage = ({ product, addToCart }) => {
         <input type="text" value={quantity} readOnly className="quantity-input" />
         <button onClick={incrementQuantity}>+</button>
       </div>
-      <button onClick={() => addToCart(product, quantity)} className="add-to-cart-button">
+      <button onClick={addToCartClick} className="add-to-cart-button">
         Add to cart
       </button>
       </div>
